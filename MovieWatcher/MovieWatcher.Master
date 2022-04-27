@@ -11,20 +11,50 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="container container-fluid">
-        <asp:ContentPlaceHolder ID="cphWebHeader" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Movie Watcher</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarContent" aria-controls="navbarContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="WatchList.aspx">Watch List</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.aspx">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Register.aspx">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <div class="container container-fluid">
+            <asp:ContentPlaceHolder ID="cphFormHeader" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
         <div class="container container-fluid">
             <asp:ContentPlaceHolder ID="cphFormBody" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <div class="container container-fluid">
+            <asp:ContentPlaceHolder ID="cphFormFooter" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
-    <div class="container container-fluid">
-        <asp:ContentPlaceHolder ID="cphFooter" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
     <%: Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap") %>
     <asp:ContentPlaceHolder ID="cphScripts" runat="server">
     </asp:ContentPlaceHolder>

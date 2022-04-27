@@ -24,15 +24,6 @@ namespace MovieWatcher
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHeadContents;
 
         /// <summary>
-        /// cphWebHeader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphWebHeader;
-
-        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace MovieWatcher
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// cphFormHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphFormHeader;
 
         /// <summary>
         /// cphFormBody control.
@@ -51,13 +51,13 @@ namespace MovieWatcher
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphFormBody;
 
         /// <summary>
-        /// cphFooter control.
+        /// cphFormFooter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphFooter;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphFormFooter;
 
         /// <summary>
         /// cphScripts control.
