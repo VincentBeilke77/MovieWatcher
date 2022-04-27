@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/MovieWatcher.Master.cs" Inherits="MovieWatcher.MovieWatcher" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>M<%: Page.Title %> - Movie Watcher</title>
+    <%: Styles.Render("~/bundles/css") %>
+    <asp:ContentPlaceHolder ID="cphHeadContents" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container container-fluid">
+        <asp:ContentPlaceHolder ID="cphWebHeader" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <form id="form1" runat="server">
+        <div class="container container-fluid">
+            <asp:ContentPlaceHolder ID="cphFormBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="container container-fluid">
+        <asp:ContentPlaceHolder ID="cphFooter" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <%: Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap") %>
+    <asp:ContentPlaceHolder ID="cphScripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
