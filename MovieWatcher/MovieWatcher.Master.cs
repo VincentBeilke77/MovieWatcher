@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 using System.Web;
 using System.Web.UI;
 
@@ -16,6 +17,9 @@ namespace MovieWatcher
         private void CheckLogin()
         {
             LoggedIn = Request.Cookies["UserInfo"] != null;
+            var userCookie = Request.Cookies["UserInfo"];
+
+            if (userCookie != null) lblUser.Text = $"Welcome {userCookie["FirstName"]} {userCookie["LastName"]}!";
         }
 
         protected void lnbLogout_Click(object sender, EventArgs e)

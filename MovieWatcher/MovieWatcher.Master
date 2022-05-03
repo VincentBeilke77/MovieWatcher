@@ -29,8 +29,11 @@
                             <% if (LoggedIn)
                                { %>
                             <li class="nav-item">
-                                <asp:HyperLink ID="hylWatchList" CssClass="nav-link active" NavigateUrl="WatchList.aspx" 
+                                <asp:HyperLink ID="hylWatchList" CssClass="nav-link" NavigateUrl="WatchList.aspx" 
                                                runat="server">Watch List</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:Label ID="lblUser" CssClass="nav-link disabled" runat="server" Text=""></asp:Label>
                             </li>
                             <% } %>
                         </ul>
