@@ -41,9 +41,14 @@ namespace MovieWatcher
 
             if (chkRememberMe.Checked)
             {
-                cookie.Expires = DateTime.Now.AddHours(1);
-                Response.Cookies.Add(cookie);
+                cookie.Expires = DateTime.Now.AddDays(14);
             }
+            else
+            {
+                cookie.Expires = DateTime.Now.AddMinutes(30);
+            }
+
+            Response.Cookies.Add(cookie);
 
             Response.Redirect("Home.aspx");
         }

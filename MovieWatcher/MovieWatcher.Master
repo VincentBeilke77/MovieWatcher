@@ -23,20 +23,34 @@
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <asp:HyperLink ID="hylHome" CssClass="nav-link active" NavigateUrl="Home.aspx" runat="server">Home</asp:HyperLink>
+                                <asp:HyperLink ID="hylHome" CssClass="nav-link active" NavigateUrl="Home.aspx" 
+                                               runat="server">Home</asp:HyperLink>
                             </li>
+                            <% if (LoggedIn)
+                               { %>
                             <li class="nav-item">
-                                <asp:HyperLink ID="hylWatchList" CssClass="nav-link active" NavigateUrl="WatchList.aspx" runat="server">Watch List</asp:HyperLink>
+                                <asp:HyperLink ID="hylWatchList" CssClass="nav-link active" NavigateUrl="WatchList.aspx" 
+                                               runat="server">Watch List</asp:HyperLink>
                             </li>
+                            <% } %>
                         </ul>
                     </div>
                     <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <% if (!LoggedIn)
+                               { %>
                             <li class="nav-item">
-                                <asp:HyperLink ID="hylLogin" NavigateUrl="Login.aspx" CssClass="nav-link" runat="server">Login</asp:HyperLink>
+                                <asp:HyperLink ID="hylLogin" NavigateUrl="Login.aspx" CssClass="nav-link"
+                                               runat="server">Login</asp:HyperLink>
+                            <% }
+                               else
+                               { %>
+                                    <asp:LinkButton ID="lnbLogout" runat="server" CssClass="nav-link" OnClick="lnbLogout_Click">Logout</asp:LinkButton>
+                            <% } %>
                             </li>
                             <li class="nav-item">
-                                <asp:HyperLink ID="hylRegister" NavigateUrl="Login.aspx" CssClass="nav-link" runat="server">Register</asp:HyperLink>
+                                <asp:HyperLink ID="hylRegister" NavigateUrl="Login.aspx" CssClass="nav-link" 
+                                               runat="server">Register</asp:HyperLink>
                             </li>
                         </ul>
                     </div>
