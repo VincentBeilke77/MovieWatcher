@@ -23,20 +23,20 @@
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
+                                <asp:HyperLink ID="hylHome" CssClass="nav-link active" NavigateUrl="Home.aspx" runat="server">Home</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="WatchList.aspx">Watch List</a>
+                                <asp:HyperLink ID="hylWatchList" CssClass="nav-link active" NavigateUrl="WatchList.aspx" runat="server">Watch List</asp:HyperLink>
                             </li>
                         </ul>
                     </div>
                     <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="Login.aspx">Login</a>
+                                <asp:HyperLink ID="hylLogin" NavigateUrl="Login.aspx" CssClass="nav-link" runat="server">Login</asp:HyperLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Register.aspx">Register</a>
+                                <asp:HyperLink ID="hylRegister" NavigateUrl="Login.aspx" CssClass="nav-link" runat="server">Register</asp:HyperLink>
                             </li>
                         </ul>
                     </div>

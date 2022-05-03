@@ -19,5 +19,10 @@ namespace MovieWatcher.Models
         public string State { get; set; }
         public string Zip { get; set; }
         public string Phone { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}:{Username}:{Email}:{FirstName}:{LastName}:{Address}:{City}:{State}:{Zip}:{Phone}";
+        }
     }
 }
