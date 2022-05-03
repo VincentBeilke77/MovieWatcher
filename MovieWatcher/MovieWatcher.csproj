@@ -136,6 +136,11 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rating.cs" />
+    <Compile Include="Models\Trailer.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WatchList.cs" />
     <Compile Include="MovieWatcher.Master.cs">
       <DependentUpon>MovieWatcher.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
