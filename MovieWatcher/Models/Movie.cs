@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,5 +17,16 @@ namespace MovieWatcher.Models
 
         public Rating Rating { get; set; }
         public Trailer Trailer { get; set; }
+
+        public Movie()
+        {
+            Rating = new Rating();
+            Trailer = new Trailer();
+        }
+
+        public override string ToString()
+        {
+            return $"{Title}:{Rating}:{Description}";
+        }
     }
 }

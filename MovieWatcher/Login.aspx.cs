@@ -28,7 +28,8 @@ namespace MovieWatcher
 
             var cookie = new HttpCookie("UserInfo")
             {
-                ["Username"] = user.Username, 
+                ["UserId"] = user.Id.ToString(),
+                ["Username"] = user.Username,
                 ["Email"] = user.Email,
                 ["FirstName"] = user.FirstName,
                 ["LastName"] = user.LastName,
@@ -36,17 +37,10 @@ namespace MovieWatcher
                 ["City"] = user.City,
                 ["State"] = user.State,
                 ["Zip"] = user.Zip,
-                ["Phone"] = user.Phone
+                ["Phone"] = user.Phone,
+                Expires = chkRememberMe.Checked ? DateTime.Now.AddDays(14) : DateTime.Now.AddMinutes(30)
             };
 
-            if (chkRememberMe.Checked)
-            {
-                cookie.Expires = DateTime.Now.AddDays(14);
-            }
-            else
-            {
-                cookie.Expires = DateTime.Now.AddMinutes(30);
-            }
 
             Response.Cookies.Add(cookie);
 
@@ -77,6 +71,7 @@ namespace MovieWatcher
 
                                 user = new User()
                                 {
+                                    Id = int.Parse(reader["Id"].ToString()),
                                     Username = reader["Username"].ToString(),
                                     Email = reader["Email"].ToString(),
                                     FirstName = reader["FirstName"].ToString(),
