@@ -125,7 +125,9 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MovieDetails.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="WatchList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +155,13 @@
     <Compile Include="Models\Trailer.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\WatchList.cs" />
+    <Compile Include="MovieDetails.aspx.cs">
+      <DependentUpon>MovieDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovieDetails.aspx.designer.cs">
+      <DependentUpon>MovieDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MovieWatcher.Master.cs">
       <DependentUpon>MovieWatcher.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -167,6 +176,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WatchList.aspx.cs">
+      <DependentUpon>WatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WatchList.aspx.designer.cs">
+      <DependentUpon>WatchList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
